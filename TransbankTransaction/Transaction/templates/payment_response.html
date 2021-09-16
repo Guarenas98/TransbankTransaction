@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div>
+      <ul>
+        <li>Status Operation: {{ respCommit.status }} </li>
+        <li>Code: {{ respCommit.authorization_code }}</li>
+        <li>Credicard: {{ respCommit.card_detail.card_number }}</li>
+        <li>Amount: {{ respCommit.amount }}</li>
+      </ul>
+  </div>
+  <h1><a href = "{% url 'index' %}">Back to Commerce Page</a></h1>
+{% endblock %}
